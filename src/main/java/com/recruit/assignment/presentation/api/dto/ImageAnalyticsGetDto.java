@@ -1,0 +1,23 @@
+package com.recruit.assignment.presentation.api.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Builder
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class ImageAnalyticsGetDto {
+
+    private Integer width;
+
+    private Integer height;
+
+    private Integer fileSize;
+
+    private Double resultValue;
+}

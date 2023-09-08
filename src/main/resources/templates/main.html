@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+    <title>위메프 상품개발팀 과제</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<main role="parse" class="container">
+    <div class="container theme-showcase" role="main">
+        <div class="page-header">
+            <form id="imageForm" th:method="post">
+                <div class="text-center" style="padding-top:50px;padding-bottom:50px;">
+                    <p class="h2">위메프 상품개발팀 채용 과제</p>
+                </div>
+                <table class="table">
+                    <tbody>
+                    <tr>
+                        <th>이미지 주소</th>
+                        <td>
+                            <input type="text" id="imageUrl" name = "imageUrl" class="form-control"  placeholder="https://www.example.com/1.png" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">
+                            <input id="btn" type="button" value="분석" class="btn btn-primary btn-lg btn-block"/>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>가로(pixel)</th>
+                        <td>
+                            <textarea disabled id="widthId" rows="1" class="form-control h-10"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>세로(pixel)</th>
+                        <td>
+                            <textarea disabled id="heightId" rows="1" class="form-control h-10"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>파일크키(kb)</th>
+                        <td>
+                            <textarea disabled id="fileSize" rows="1" class="form-control h-10"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>계산값</th>
+                        <td>
+                            <textarea disabled id="resultValue" rows="1" class="form-control h-10"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>오류메시지</th>
+                        <td>
+                            <textarea disabled id="errorMsg" rows="1" class="form-control h-10"></textarea>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </div>
+</main>
+
+<script src="/js/jquery-3.6.1.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+<script type="text/javascript">
+    $(function() {
+        main.init();
+    });
+</script>
+</body>
+</html>
